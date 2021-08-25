@@ -1,0 +1,4 @@
+flask == 1.0 
+redis == 3.5.3
+FLASK-SQLAlchemy == 2.5.1
+psycopg2-binary
