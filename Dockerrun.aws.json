@@ -1,5 +1,5 @@
 {
-    "AWSDockerrunversion": 2,
+    "AWSEBDockerrunVersion": 2,
     "containerDefinitions":[{
         "enviroment":[{
             "name": "POSTGRES_USER",
@@ -11,17 +11,17 @@
         },
         {
             "name": "POSTGRES_DB",
-            "value": "hwello_flask_dev"
+            "value": "hello_flask_dev"
         }],
         "essential": true,
         "image": "postgres:2-alpine",
         "memory": 100,
         "mountPoints":[{
-            "containerPath": "/var/lib/postgreql/date/",
+            "containerPath": "/var/lib/postgresql/data/",
             "sourceVolume": "postgres_data"
         }],
         "name": "db",
-        "portMapping": [{
+        "portMappings": [{
             "containerPort": 5432,
             "hostPost": 5432
         }]
@@ -32,7 +32,7 @@
         "image": "redis:6.0.8",
         "memory": 100,
         "name": "redis",
-        "portMapping": [{
+        "portMappings": [{
             "containerPort": 6379,
             "hostPost": 6379
         }]
@@ -46,7 +46,7 @@
             "name": "web",
             "image": "jbflow93/user-wishlist-app",
             "memory": 100,
-            "portMapping":[{
+            "portMappings":[{
                 "containerPort": 80,
                 "hostPort": 80
         }]
