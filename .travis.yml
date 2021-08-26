@@ -14,8 +14,8 @@ deploy:
   provider: elasticbeanstalk
   edge: true
   region: us-east-1
-  app: <<app>>
-  env: <<env>>
+  app: jb-user-wishlist-app
+  env: Jbuserwishlistapp-env
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket_name: "<<bucket_name>>"
