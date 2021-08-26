@@ -21,4 +21,4 @@ deploy:
   bucket_name: "<<bucket_name>>"
   bucket_path: "docker"
   on:
-    branch: multi-cont-app
+    branch: Multi-cont-app
