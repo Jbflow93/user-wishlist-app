@@ -67,7 +67,7 @@ def save():
 
     return render_template('index.html', saved=1, username=username, place=red.hget(username,"place").decode('utf-8'), food= red.hget(username,"food").decode('utf-8'))
 
-@app.route("/get", methods=['POST'])    
+@app.route("/get", methods=['POST's])    
 def get():
     username = request.form['username']
     print ("Username:", username)

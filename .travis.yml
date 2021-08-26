@@ -3,9 +3,9 @@ language: generic
 services:
     - docker
 
-after_success:
+script:
     - docker build -t jbflow93/user-wishlist-app .
-
+after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
     - docker push jbflow93/user-wishlist-app
@@ -18,7 +18,7 @@ deploy:
   env: Jbuserwishlistapp-env
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  bucket_name: "<<bucket_name>>"
+  bucket_name: "multi-wishlist-app"
   bucket_path: "docker"
   on:
     branch: Multi-cont-app
