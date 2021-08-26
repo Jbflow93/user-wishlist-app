@@ -13,11 +13,11 @@ after_success:
 
 deploy:
   region: us-east-2
-  provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket_name: multi-wishlist-app
   bucket_path: docker
+  app: "jb-user-wishlist-app"
   env: Jbuserwishlistapp-env
   provider: elasticbeanstalk
   true:
